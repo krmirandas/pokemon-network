@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>pokemons module &#8212; documentación de Pokemon Go - 0.0.1</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-pokemons">
+<span id="pokemons-module"></span><h1>pokemons module<a class="headerlink" href="#module-pokemons" title="Enlazar permanentemente con este título">¶</a></h1>
+<dl class="function">
+<dt id="pokemons.capture_pokemon">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">capture_pokemon</code><span class="sig-paren">(</span><em class="sig-param">conn</em>, <em class="sig-param">user_id</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.capture_pokemon" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Captura de un pokemón.
+Args:
+conn: Socket utilizado.
+user_id: Identificador del usuario.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.choose_random_pokemon">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">choose_random_pokemon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.choose_random_pokemon" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Reegresa un número aleatorio entre [1, len(db_pokemons)].
+Returns:
+(int) Numero positivo entre [1, len(db_pokemons)].</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.clientthread">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">clientthread</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.clientthread" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Función para manejar la conexión de cada cliente.
+Args:
+conn: Socket utilizado.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.get_bool_answer">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">get_bool_answer</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.get_bool_answer" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Obtiene la la respuesta del usuario.
+Args:
+conn: Socket utilizado.
+Returns:
+(bool) Respuesta.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.get_request">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">get_request</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.get_request" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Obtiene por el socket la solicitud.
+Args:
+conn: Socket utilizado.
+Returns:
+(int) Número de la solicitud.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.get_user_id">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">get_user_id</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.get_user_id" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Obtiene el identificador del usuario.
+Args:
+conn: Socket utilizado.
+Returns:
+ID elegido.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.get_user_pwd">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">get_user_pwd</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.get_user_pwd" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Obtiene la contraseña del usuario.
+Args:
+conn: Socket utilizado.
+Returns:
+La contraseña del usuario.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.say_hello">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">say_hello</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.say_hello" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envía mensaje de bienvenida.
+Args:
+conn: Socket utilizado.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.send_active_user">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">send_active_user</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.send_active_user" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envía mesaje de usuario activo.
+Args:
+conn: Socket utilizado.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.send_all_catched">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">send_all_catched</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.send_all_catched" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envía pokemones capturados.
+Args:
+conn: Socket utilizado.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.send_already_have">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">send_already_have</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.send_already_have" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envía mesaje de pokemon ya capturado.
+Args:
+conn: Socket utilizado.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.send_attempts">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">send_attempts</code><span class="sig-paren">(</span><em class="sig-param">conn</em>, <em class="sig-param">n</em>, <em class="sig-param">pokemon_id</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.send_attempts" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envía el número de intentos con el id del pokemon.
+Args:
+conn: Socket utilizado.
+pokemon_id: ID del pokenon.
+n: Número de intentos.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.send_captured_pokemons">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">send_captured_pokemons</code><span class="sig-paren">(</span><em class="sig-param">conn</em>, <em class="sig-param">id_user</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.send_captured_pokemons" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envía los pokemones capturados.
+Args:
+conn: Socket utilizado.
+id_user: Identificador del usuario.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.send_confirmation">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">send_confirmation</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.send_confirmation" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envía confirmación del servidor.
+Args:
+conn: Socket utilizado.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.send_id_no_encontrado">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">send_id_no_encontrado</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.send_id_no_encontrado" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envía mensaje de ID no encontrado.
+Args:
+conn: Socket utilizado.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.send_image">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">send_image</code><span class="sig-paren">(</span><em class="sig-param">conn</em>, <em class="sig-param">pokemon_row</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.send_image" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envía a imagen del pomekemon.
+Args:
+conn: Socket utilizado.
+pokemon_row: La fila del pokemon.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.send_not_have">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">send_not_have</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.send_not_have" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envía mensaje de pokemón disponible.
+Args:
+conn: Socket utilizado.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.send_pass_no_match">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">send_pass_no_match</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.send_pass_no_match" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envía mesaje de contraseña incorrecta.
+Args:
+conn: Socket utilizado.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.send_pokemon_info">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">send_pokemon_info</code><span class="sig-paren">(</span><em class="sig-param">conn</em>, <em class="sig-param">pokemon_row</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.send_pokemon_info" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envía por el socket la fila de los pokemones.
+Args:
+conn: Socket utilizado.
+pokemon_row: Fila de los pokemones.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.send_pregunta_juego">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">send_pregunta_juego</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.send_pregunta_juego" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envía un pregunta para inicializar juego.
+Args:
+conn: Socket utilizado.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.send_ran_out_of_attempts">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">send_ran_out_of_attempts</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.send_ran_out_of_attempts" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envía mesaje de número que no hay más intentos.
+Args:
+conn: Socket utilizado.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.send_successful_capture">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">send_successful_capture</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.send_successful_capture" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envía mensaje de captura exitosa.
+Args:
+conn: Socket utilizado.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.send_trainers">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">send_trainers</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.send_trainers" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Enviá los entrenadores.
+Args:
+conn: Socket utilizado.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.terminate">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">terminate</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.terminate" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Termina la conexión con el socket.
+Args:
+conn: Socket utilizado.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.terminate_session">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">terminate_session</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.terminate_session" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Finaliza la sesión con el cliente.
+Args:
+conn: Socket utilizado.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pokemons.transmit">
+<code class="sig-prename descclassname">pokemons.</code><code class="sig-name descname">transmit</code><span class="sig-paren">(</span><em class="sig-param">conn</em>, <em class="sig-param">message</em><span class="sig-paren">)</span><a class="headerlink" href="#pokemons.transmit" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envía un mensaje.
+Args:
+conn: Socket utilizado.
+message: Mensaje o codigo de envío.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Pokemon Go</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Kevin Miranda.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/pokemons.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

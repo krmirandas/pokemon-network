@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>client module &#8212; documentación de Pokemon Go - 0.0.1</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-client">
+<span id="client-module"></span><h1>client module<a class="headerlink" href="#module-client" title="Enlazar permanentemente con este título">¶</a></h1>
+<dl class="class">
+<dt id="client.Client">
+<em class="property">class </em><code class="sig-prename descclassname">client.</code><code class="sig-name descname">Client</code><span class="sig-paren">(</span><em class="sig-param">host</em>, <em class="sig-param">port</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="connection.html#connection.Connection" title="connection.Connection"><code class="xref py py-class docutils literal notranslate"><span class="pre">connection.Connection</span></code></a></p>
+<dl class="method">
+<dt id="client.Client.commence_protocol">
+<code class="sig-name descname">commence_protocol</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.commence_protocol" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Iniciailiza la conexión con el prótocolo para iniciar la captura
+de pokemones.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.confirmed_id">
+<code class="sig-name descname">confirmed_id</code><span class="sig-paren">(</span><em class="sig-param">decision</em>, <em class="sig-param">first</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.confirmed_id" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Confirma identificador.
+Args:
+decision: Identificador de la decisión.
+first: Si el usuario ya corresponde a un entrenador.
+Returns:
+(bool) Su el identificador ya fue confirmado.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.greetting">
+<code class="sig-name descname">greetting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.greetting" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Mostrar mensaje de bienvenida que es enviado por el servidor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.input_password">
+<code class="sig-name descname">input_password</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.input_password" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Le pide al usuario su contraseña.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.password_confirmed">
+<code class="sig-name descname">password_confirmed</code><span class="sig-paren">(</span><em class="sig-param">password</em>, <em class="sig-param">first</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.password_confirmed" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Verifica la contraseña para así permitir el acceso al juego.
+Args:
+password: Contraseña del usuario
+first: Si es la primera vez que estaba dentro
+Returns:
+(bool) Si pudo acceder a jugar.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.receive_captured_list">
+<code class="sig-name descname">receive_captured_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.receive_captured_list" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Muestra los pokemones capturados del socket.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.receive_capturing_validation">
+<code class="sig-name descname">receive_capturing_validation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.receive_capturing_validation" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Muestra las posibles opciones sobre la captura de los pokemones
+tales conmo que lo has capturado o no.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.receive_image">
+<code class="sig-name descname">receive_image</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.receive_image" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Recibe la imagen del pokemon que fue enviada por el servidor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.receive_list">
+<code class="sig-name descname">receive_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.receive_list" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Recibe la lista personas con las que se jugará.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.receive_pokemon_suggestion">
+<code class="sig-name descname">receive_pokemon_suggestion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.receive_pokemon_suggestion" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Le pregunta al usuario si quiere capturar a ese pokemon.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.receive_session_termination">
+<code class="sig-name descname">receive_session_termination</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.receive_session_termination" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Recibe por el socket el estado de que la sesión ya se ha terminado</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.request_capturing">
+<code class="sig-name descname">request_capturing</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.request_capturing" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Pide que se pueda capturar un pokemon.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.send_capturing_answer">
+<code class="sig-name descname">send_capturing_answer</code><span class="sig-paren">(</span><em class="sig-param">answer</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.send_capturing_answer" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Envía al servidor si sí fue capturado o no el pokemon.
+Args:
+answer: Respuesta de si se ha capturado.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.send_reception_image">
+<code class="sig-name descname">send_reception_image</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.send_reception_image" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Muestra un mensaje de que ya envió la imagen.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.verify_capture">
+<code class="sig-name descname">verify_capture</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.verify_capture" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Verifica si se capturó un pokmeon.
+Returns:
+(bool) Si se capturó un pokmeon.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.verify_img_code">
+<code class="sig-name descname">verify_img_code</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.verify_img_code" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Verifica si el código el código es de una imagen.
+Args:
+code: Código de la imágen.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.verify_pokemon">
+<code class="sig-name descname">verify_pokemon</code><span class="sig-paren">(</span><em class="sig-param">id_p</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.verify_pokemon" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Verifica si el identificaor del pokemon es válido.
+Args:
+id_p: Identificador del pokemon.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Pokemon Go</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Kevin Miranda.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/client.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

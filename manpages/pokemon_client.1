@@ -1,0 +1,18 @@
+.\" Manpage for pokemon_client.
+.TH man 8 "14 May 2018" "1.0" "pokemon_client man page"
+.SH NAME
+pokemon_client \- Aplicacion de cliente que simula la captura de Pokemons.
+.SH SYNOPSIS
+.B pokemon_client
+[\fIoptions\fR]
+.SH DESCRIPTION
+Puede tener una direccion para conectarse a un host de esta manera
+--host=192.168.0.1 (esta direccion la puede poner el usuario) o puede
+no llevar argumentos y se referira a 'localhost'.
+El cliente solicita al servidor un pokemon para poder capturarlo. Se le ofrecera un pokemon aleatorio y este
+tendra n intentos para capturarlo, si no logra hacerlo, se le preguntará si quiere intentarlo de nuevo.
+Si tiene exito al atraparlo, la imagen del pokemon capturada sera
+guarada en el equipo del cliente.
+
+.IP "\-\-host=\fIHOST\fR"
+La direccion del host.

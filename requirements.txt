@@ -1,0 +1,4 @@
+Sphinx==1.5.5
+sphinx-rtd-theme==0.2.4
+sphinxcontrib-plantuml==0.8.2
+pickle
